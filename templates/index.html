@@ -1,0 +1,51 @@
+<html>
+
+
+<title>Comet Orbit Classfier</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<div class="content">
+    <h1 style="text-align: center">Comet Orbit Classfier
+    </h1>
+
+    <div class="form">
+        <form action="/result" method="POST" >
+
+            <label for="e">Eccentricity</label>
+            <input  id="e" name="e" >
+
+            <label for="i">Inclination</label>
+            <input  id="i" name="i" >
+
+            <label for="om">Longitude of the ascending node</label>
+            <input  id="om" name="om" >
+
+            <label for="w">argument of perihelion</label>
+            <input id="w" name="w" >
+
+            <label for="q">Perihelion distance</label>
+            <input  id="q" name="q" >
+
+            <label for="dataArc">No. of Days spanned by the data-arc</label>
+            <input  id="dataArc" name="dataArc" >
+
+            <label for="obs">No. of observations used</label>
+            <input  id="obs" name="obs" >
+
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+
+    <div style='color:red;font-size:40px;margin: 0 auto;'>
+        {{x0}}
+        <br>
+        {{x1}}
+        <br>
+        {{x2}}
+        <br>
+        {{x3}}
+</div>
+
+
+</html>
+
+
